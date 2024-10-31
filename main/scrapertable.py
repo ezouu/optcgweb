@@ -5,10 +5,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from tabulate import tabulate
+import os
+from dotenv import load_dotenv
 from pymongo import MongoClient
 
-# MongoDB connection setup
-client = MongoClient('mongodb+srv://eddiezouu:FfUcJLn5ICEYCSjm@optcgroi.iyf1b.mongodb.net/?retryWrites=true&w=majority&appName=optcgroi')  # Replace with your MongoDB URI
+load_dotenv()
+mongo_uri = os.getenv("MONGODB_URI")
+client = MongoClient(mongo_uri)  # Use the URI from the environment variable
 db = client['my_database']  # Database name
 collection = db['card_prices']  # Collection name
 
