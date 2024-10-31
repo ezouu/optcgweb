@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Collection</title>
+</head>
+<body>
+    <h1>Welcome to the Card Collection</h1>
+    <button onclick="fetchCards()">Load Cards</button>
+    <div id="cards-list"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</body>
+</html>
