@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ set_name }} - Box Contents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Contents of {{ set_name }}</h1>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <div class="card-list">
+        {% for card in cards %}
+            <div class="card-item">
+                <p><strong>Rarity:</strong> {{ card.Rarity }}</p>
+                <p><strong>Number:</strong> {{ card.Number }}</p>
+                <p><strong>Price:</strong> {{ card.Price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,12 +1,10 @@
-/* Center the content */
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
     margin: 0;
+    padding: 20px;
     background-color: #f4f4f9;
 }
 
@@ -14,36 +12,31 @@ h1 {
     color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#cards-list {
-    margin-top: 20px;
+.box-list, .card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
     max-width: 600px;
+}
+
+.box-item, .card-item {
     background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-#cards-list p {
-    margin: 10px 0;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.box-item a, .card-item {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
 
-#cards-list p:last-child {
-    border-bottom: none;
+.box-item a:hover {
+    text-decoration: underline;
 }

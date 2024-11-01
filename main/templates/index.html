@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Card Collection</title>
+    <title>One Piece Card Game Boxes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Card Collection</h1>
-    <button onclick="fetchCards()">Load Cards</button>
-    <div id="cards-list"></div>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <h1>One Piece Card Game Boxes</h1>
+    <div class="box-list">
+        {% for set in sets %}
+            <div class="box-item">
+                <a href="{{ url_for('view_box', set_name=set.name) }}">
+                    Box {{ set.id }} - {{ set.name }}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
