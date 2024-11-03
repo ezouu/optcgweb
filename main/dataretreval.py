@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, render_template
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
@@ -16,14 +16,14 @@ app = Flask(__name__)
 def index():
     # List of sets (boxes)
     sets = [
-        {"name": "Romance Dawn", "id": 1},
-        {"name": "Paramount War", "id": 2},
-        {"name": "Pillars of Strength", "id": 3},
-        {"name": "Kingdoms of Intrigue", "id": 4},
-        {"name": "Awakening of the New Era", "id": 5},
-        {"name": "Wings of the Captain", "id": 6},
-        {"name": "500 Years in the Future", "id": 7},
-        {"name": "Two Legends", "id": 8}
+        {"id": 1, "name": "Romance Dawn", "image": "Romance Dawn.jpg"},
+        {"id": 2, "name": "Paramount War", "image": "Paramount War.jpg"},
+        {"id": 3, "name": "Pillars of Strength", "image": "Pillars of Strength.jpg"},
+        {"id": 4, "name": "Kingdoms of Intrigue", "image": "Kingdoms of Intrigue.jpg"},
+        {"id": 5, "name": "Awakening of the New Era", "image": "Awakening of the New Era.jpg"},
+        {"id": 6, "name": "Wings of the Captain", "image": "Wings of the Captain.jpg"},
+        {"id": 7, "name": "500 Years in the Future", "image": "500 Years in the Future.jpg"},
+        {"id": 8, "name": "Two Legends", "image": "Two Legends.jpg"}
     ]
     return render_template('index.html', sets=sets)
 
