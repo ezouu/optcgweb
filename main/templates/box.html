@@ -8,14 +8,29 @@
 <body>
     <h1>Contents of {{ set_name }}</h1>
     <a href="{{ url_for('index') }}">Back to Home</a>
-    <div class="card-list">
-        {% for card in cards %}
-            <div class="card-item">
-                <p><strong>Rarity:</strong> {{ card.Rarity }}</p>
-                <p><strong>Number:</strong> {{ card.Number }}</p>
-                <p><strong>Price:</strong> {{ card.Price }}</p>
-            </div>
-        {% endfor %}
-    </div>
+    <table class="card-table">
+        <thead>
+            <tr>
+                <th>Card Name</th>
+                <th>Rarity</th>
+                <th>Number</th>
+                <th>Market Price</th>
+                <th>Product URL</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for card in cards %}
+                <tr>
+                    <td>{{ card['Number'] }}</td>
+                    <td>{{ card['Rarity'] }}</td>
+                    <td>{{ card['Number'] }}</td>
+                    <td>{{ card['Market Price'] }}</td>
+                    <td><a href="{{ card['Product URL'] }}" target="_blank" rel="noopener noreferrer">{{ card['Product URL'] }}</a></td>
+                    <td><img src="{{ card['Image URL'] }}" alt="{{ card['Number'] }}" class="card-image"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

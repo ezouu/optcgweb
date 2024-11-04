@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://www.tcgplayer.com/categories/trading-and-collectible-card-games/one-piece-card-game/price-guides/romance-dawn'
+url = 'https://www.tcgplayer.com/product/528661/one-piece-card-game-awakening-of-the-new-era-amazon?Language=English'
 
 response = requests.get(url)
 
