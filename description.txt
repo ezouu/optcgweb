@@ -1,0 +1,4 @@
+title: TCGplayer Webscraper/Analyzer
+year: 2025 -- present
+image: images/project-image.jpg
+description: Developed a full-stack web scraping application using Python and Node.js that automatically collects and analyzes One Piece Trading Card Game market data from multiple sources. Implemented robust data collection systems using Selenium and Playwright for browser automation, with MongoDB for data persistence, demonstrating expertise in web scraping, API integration, and database management. The application features comprehensive error handling, automated retry mechanisms, and scalable architecture, while utilizing environment variables and secure connection handling for production-grade security measures.
